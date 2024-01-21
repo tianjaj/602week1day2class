@@ -1,0 +1,10 @@
+var express = require('express');
+var app = express();
+
+var path = require('path');
+var port = 3000;
+var hostname = 'localhost';
+app.use(express.static(path.join(_dirname,'public')));
+app.listen(port, hostname, function(){
+    console.log('App is running on ');
+});
